@@ -53,7 +53,7 @@ export class NautilusNode {
     async initialize() {
         try {
             // Register the worklet module
-            await this.ctx.audioWorklet.addModule('/worklets/nautilus-processor.js');
+            await this.ctx.audioWorklet.addModule(new URL('/worklets/nautilus-processor.js', import.meta.url).href);
 
             // Create the worklet node
             this.workletNode = new AudioWorkletNode(this.ctx, 'nautilus-processor', {

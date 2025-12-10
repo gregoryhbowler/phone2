@@ -81,7 +81,7 @@ export class MorphageneNode {
     async initialize() {
         try {
             // Register the worklet module
-            await this.ctx.audioWorklet.addModule('/worklets/morphagene-processor.js');
+            await this.ctx.audioWorklet.addModule(new URL('/worklets/morphagene-processor.js', import.meta.url).href);
 
             // Create the worklet node
             this.workletNode = new AudioWorkletNode(this.ctx, 'morphagene-processor', {

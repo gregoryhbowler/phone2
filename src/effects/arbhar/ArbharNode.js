@@ -111,7 +111,7 @@ export class ArbharNode {
     async initialize() {
         try {
             // Register the worklet module
-            await this.ctx.audioWorklet.addModule('/worklets/arbhar-processor.js');
+            await this.ctx.audioWorklet.addModule(new URL('/worklets/arbhar-processor.js', import.meta.url).href);
 
             // Create the worklet node
             this.workletNode = new AudioWorkletNode(this.ctx, 'arbhar-processor', {

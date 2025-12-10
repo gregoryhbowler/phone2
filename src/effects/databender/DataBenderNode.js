@@ -89,7 +89,7 @@ export class DataBenderNode {
     async initialize() {
         try {
             // Register the worklet module
-            await this.ctx.audioWorklet.addModule('/worklets/databender-processor.js');
+            await this.ctx.audioWorklet.addModule(new URL('/worklets/databender-processor.js', import.meta.url).href);
 
             // Create the worklet node
             this.workletNode = new AudioWorkletNode(this.ctx, 'databender-processor', {

@@ -152,7 +152,7 @@ export class LubadhNode {
     async initialize() {
         try {
             // Register the worklet module
-            await this.ctx.audioWorklet.addModule('/worklets/lubadh-processor.js');
+            await this.ctx.audioWorklet.addModule(new URL('/worklets/lubadh-processor.js', import.meta.url).href);
 
             // Create the worklet node
             this.workletNode = new AudioWorkletNode(this.ctx, 'lubadh-processor', {
