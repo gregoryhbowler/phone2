@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/phone2/',
   root: '.',
   publicDir: 'public',
   server: {
