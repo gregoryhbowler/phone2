@@ -1,0 +1,17 @@
+{
+  "name": "Glass Machine",
+  "short_name": "Glass",
+  "description": "A gesture-driven synthesizer inspired by minimalist composers",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%236366f1'/%3E%3Ccircle cx='50' cy='50' r='25' fill='%238b5cf6'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23a855f7'/%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
